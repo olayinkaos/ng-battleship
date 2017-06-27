@@ -96,7 +96,7 @@ var AppComponent = (function () {
     AppComponent.prototype.initPusher = function () {
         var _this = this;
         var pusher = new Pusher('26b7d8fa6aa64488853b', {
-            authEndpoint: 'http://localhost:3000/pusher/auth',
+            authEndpoint: '/pusher/auth',
             cluster: 'eu'
         });
         var channel = pusher.subscribe(this.gameId);
