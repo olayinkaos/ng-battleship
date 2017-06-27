@@ -24,7 +24,7 @@
 
         <div *ngIf="players < 2">
           <h2>Waiting for 2nd user to join...</h2>
-          <h3 class="subtitle is-6">You can invite them with this link: {{ gameUrl }}?id={{ gameId }} or open it in a new browser, to play all by yourself.</h3>
+          <h3 class="subtitle is-6">You can invite them with this link: {{ gameUrl }}?id={{ gameId }}. You can also open <a href="" target="_blank">this link</a> in a new browser, to play all by yourself.</h3>
         </div>
 
         <div class="columns" *ngIf="validPlayer">
