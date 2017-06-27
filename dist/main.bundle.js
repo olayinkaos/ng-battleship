@@ -317,7 +317,7 @@ var BattleshipBoardService = (function () {
     BattleshipBoardService.prototype.randomShips = function (board, len) {
         len = len - 1;
         var ranRow = this.getRandomInt(0, len), ranCol = this.getRandomInt(0, len);
-        if (board[ranRow][ranCol] == 1) {
+        if (board[ranRow][ranCol].value == 1) {
             return this.randomShips(board, len);
         }
         else {
@@ -357,7 +357,7 @@ var environment = {
 /***/ 620:
 /***/ (function(module, exports) {
 
-module.exports = ".content table td, .content table th {\n    border: 1px solid #dbdbdb;\n    padding: 0.5em 0.75em;\n    vertical-align: middle;\n    height: 50px;\n    text-align: center;\n}\n.content table {\n  width: 80%;\n  margin: 0 auto;\n}\n.content table tr:hover {\n    background-color: transparent;\n}\n"
+module.exports = ".content table td, .content table th {\n    border: 1px solid #dbdbdb;\n    padding: 0.5em 0.75em;\n    vertical-align: middle;\n    height: 50px;\n    text-align: center;\n}\n.content table {\n  width: 80%;\n  margin: 0 auto;\n}\n.content table tr:hover {\n    background-color: transparent;\n}\n.content .battleship-tile:hover {\n  cursor: pointer;\n}\n"
 
 /***/ }),
 

@@ -50,7 +50,7 @@ export class BattleshipBoardService {
     len = len - 1;
     let ranRow = this.getRandomInt(0, len),
     ranCol = this.getRandomInt(0, len);
-    if (board[ranRow][ranCol] == 1) {
+    if (board[ranRow][ranCol].value == 1) {
       return this.randomShips(board, len);
     } else {
       board[ranRow][ranCol].value = 1;
