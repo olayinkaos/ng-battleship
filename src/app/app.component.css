@@ -1,0 +1,14 @@
+.content table td, .content table th {
+    border: 1px solid #dbdbdb;
+    padding: 0.5em 0.75em;
+    vertical-align: middle;
+    height: 50px;
+    text-align: center;
+}
+.content table {
+  width: 80%;
+  margin: 0 auto;
+}
+.content table tr:hover {
+    background-color: transparent;
+}

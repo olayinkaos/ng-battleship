@@ -1,0 +1,58 @@
+<div class="section">
+  <div class="container">
+    <div class="content">
+      <h1 class="title">Ready to sink some battleships?</h1>
+      <h6 class="subtitle is-6"><strong>Pusher Battleship</strong></h6>
+
+      <hr>
+
+      <section *ngIf="winner" class="notification is-success has-text-centered" style="color:white">
+        <h1>
+          Player {{ winner.player.id }} has won the game!
+        </h1>
+        <h5>
+          Click <a href="{{ gameUrl }}">here</a> to start a new game.
+        </h5>
+      </section>
+
+      <section *ngIf="!winner">
+        <div *ngIf="player > 1">
+          <div class="notification is-danger">
+            Sorry, only 2 players can play at a time. You can start your own game by visiting <a href="{{ gameUrl }}">{{ gameUrl }}</a>
+          </div>
+        </div>
+
+        <div *ngIf="players < 2">
+          <h2>Waiting for 2nd user to join...</h2>
+          <h3 class="subtitle is-6">You can invite them with this link: {{ gameUrl }}?id={{ gameId }}</h3>
+        </div>
+
+        <div class="columns" *ngIf="validPlayer">
+          <div class="column has-text-centered" *ngFor="let board of boards; let i = index">
+            <h5>
+              PLAYER {{ board.player.id }} <span class="tag is-info" *ngIf="i == player">You</span>
+              // <strong>SCORE: {{ board.player.score }}</strong>
+            </h5>
+            <table class="is-bordered" [style.opacity] = "i == player ? 0.5 : 1">
+              <tr *ngFor="let row of board.tiles; let j = index">
+                <td *ngFor="let col of row; let k = index"
+                  (click) = "shootMissile($event)"
+                  [style.background-color] = "col.used ? '' : 'transparent'"
+                  [class] = "col.status == 'win' ? 'win' : 'fail'"
+                  class="battleship-tile" id="t{{i}}{{j}}{{k}}">
+                  {{ col.value == "X" ? "X" : "💀" }}
+                </td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+      </section>
+
+
+
+      <h5 class="title has-text-centered"><small>{{ players }} player(s) in game</small></h5>
+
+    </div>
+  </div>
+</div>

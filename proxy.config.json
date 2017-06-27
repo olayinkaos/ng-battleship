@@ -1,0 +1,7 @@
+{
+  "/api/auth":{
+    "target":"http://localhost:3000/pusher/auth",
+    "secure":false,
+    "logLevel":"debug"
+  }
+}
