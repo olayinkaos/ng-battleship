@@ -1,4 +1,4 @@
-webpackJsonp([1,5],{
+webpackJsonp([2,5],{
 
 /***/ 219:
 /***/ (function(module, exports) {
@@ -316,7 +316,7 @@ function updateLink(linkElement, obj) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(615);
+var content = __webpack_require__(618);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(224)(content, {});
@@ -343,7 +343,7 @@ if(false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(616);
+var content = __webpack_require__(619);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(224)(content, {});
@@ -370,7 +370,7 @@ if(false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(617);
+var content = __webpack_require__(620);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(224)(content, {});
@@ -391,7 +391,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 615:
+/***/ 618:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(219)();
@@ -406,7 +406,7 @@ exports.push([module.i, ".toast-title{font-weight:700}.toast-message{word-wrap:b
 
 /***/ }),
 
-/***/ 616:
+/***/ 619:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(219)();
@@ -421,7 +421,7 @@ exports.push([module.i, "/*! bulma.io v0.4.2 | MIT License | github.com/jgthms/b
 
 /***/ }),
 
-/***/ 617:
+/***/ 620:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(219)();
@@ -436,7 +436,7 @@ exports.push([module.i, "/* You can add global styles to this file, and also imp
 
 /***/ }),
 
-/***/ 640:
+/***/ 643:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(354);
@@ -446,5 +446,5 @@ module.exports = __webpack_require__(352);
 
 /***/ })
 
-},[640]);
+},[643]);
 //# sourceMappingURL=styles.bundle.map

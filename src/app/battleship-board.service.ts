@@ -1,52 +1,38 @@
 import { Injectable } from '@angular/core';
+import { Board } from './board'
+import { Player } from './player'
 
 @Injectable()
 export class BattleshipBoardService {
 
   playerId: number = 1;
-  boards = [];
+  boards: Board[] = [];
 
-  constructor() {
-
-  }
-
-  createBoards(size:number = 5, players: Number = 2) {
-    for (let i = 0; i < players; i++) {
-      this.createBoard(size);
-    }
-  }
+  constructor() { }
 
   createBoard(size:number = 5) : BattleshipBoardService {
-    let board = [];
-    for(var i=0; i < size; i++) {
-        board[i] = [];
-        for(var j=0; j< size; j++) {
-            board[i][j] = {
-              used: false,
-              value: 0,
-              status: ''
-            };
-        }
-    }
-    for (let i = 0; i < size * 2; i++) {
-      board = this.randomShips(board, size);
-    }
-    let fullBoard = {
-      tiles: board,
-      player: {
-        id: this.playerId++,
-        score: 0
+    let tiles = [];
+    // create tiles for board
+    for(let i=0; i < size; i++) {
+      tiles[i] = [];
+      for(let j=0; j< size; j++) {
+        tiles[i][j] = { used: false, value: 0, status: '' };
       }
     }
-    this.boards.push(fullBoard);
+    // generate random ships for the board
+    for (let i = 0; i < size * 2; i++) {
+      tiles = this.randomShips(tiles, size);
+    }
+    // create board
+    let board = new Board({
+      player: new Player({ id: this.playerId++ }),
+      tiles: tiles
+    });
+    this.boards.push(board);
     return this;
   }
 
-  getBoards() {
-    return this.boards;
-  }
-
-  randomShips(board, len) {
+  randomShips(board: Object[], len: number) : Object[] {
     len = len - 1;
     let ranRow = this.getRandomInt(0, len),
     ranCol = this.getRandomInt(0, len);
@@ -59,7 +45,10 @@ export class BattleshipBoardService {
   }
 
   getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  getBoards() : Board[] {
+    return this.boards;
+  }
 }

@@ -12,6 +12,6 @@
 .content table tr:hover {
     background-color: transparent;
 }
-.content .battleship-tile:hover {
+.battleship-tile:hover {
   cursor: pointer;
 }

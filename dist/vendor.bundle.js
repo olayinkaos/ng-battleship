@@ -6515,7 +6515,7 @@ function templateVisitAll(visitor, asts, context) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise__ = __webpack_require__(628);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise__ = __webpack_require__(631);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facade_collection__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__facade_lang__ = __webpack_require__(69);
@@ -9653,7 +9653,7 @@ function NgControl_tsickle_Closure_declarations() {
 "use strict";
 
 var root_1 = __webpack_require__(101);
-var toSubscriber_1 = __webpack_require__(634);
+var toSubscriber_1 = __webpack_require__(637);
 var observable_1 = __webpack_require__(346);
 /**
  * A representation of any set of values over any amount of time. This the most basic building block
@@ -12497,8 +12497,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(63);
 var Subscriber_1 = __webpack_require__(221);
 var Subscription_1 = __webpack_require__(222);
-var ObjectUnsubscribedError_1 = __webpack_require__(630);
-var SubjectSubscription_1 = __webpack_require__(623);
+var ObjectUnsubscribedError_1 = __webpack_require__(633);
+var SubjectSubscription_1 = __webpack_require__(626);
 var rxSubscriber_1 = __webpack_require__(223);
 /**
  * @class SubjectSubscriber<T>
@@ -26199,7 +26199,7 @@ function NgSelectMultipleOption_tsickle_Closure_declarations() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_observable_fromPromise__ = __webpack_require__(626);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_observable_fromPromise__ = __webpack_require__(629);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_observable_fromPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_shared__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facade_async__ = __webpack_require__(68);
@@ -40630,7 +40630,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
 var toast_options_1 = __webpack_require__(148);
 var platform_browser_1 = __webpack_require__(137);
-__webpack_require__(624);
+__webpack_require__(627);
 var Subject_1 = __webpack_require__(75);
 var ToastContainer = (function () {
     function ToastContainer(sanitizer, cdr, _zone, options) {
@@ -41098,12 +41098,12 @@ var SafeSubscriber = (function (_super) {
 
 "use strict";
 
-var isArray_1 = __webpack_require__(632);
-var isObject_1 = __webpack_require__(633);
+var isArray_1 = __webpack_require__(635);
+var isObject_1 = __webpack_require__(636);
 var isFunction_1 = __webpack_require__(348);
-var tryCatch_1 = __webpack_require__(635);
+var tryCatch_1 = __webpack_require__(638);
 var errorObject_1 = __webpack_require__(347);
-var UnsubscriptionError_1 = __webpack_require__(631);
+var UnsubscriptionError_1 = __webpack_require__(634);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -57953,7 +57953,7 @@ var toast_container_component_1 = __webpack_require__(220);
 exports.ToastContainer = toast_container_component_1.ToastContainer;
 var toast_options_1 = __webpack_require__(148);
 exports.ToastOptions = toast_options_1.ToastOptions;
-var toast_module_1 = __webpack_require__(618);
+var toast_module_1 = __webpack_require__(621);
 exports.ToastModule = toast_module_1.ToastModule;
 //# sourceMappingURL=ng2-toastr.js.map
 
@@ -73094,7 +73094,10 @@ var /** @type {?} */ VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["
 /* 615 */,
 /* 616 */,
 /* 617 */,
-/* 618 */
+/* 618 */,
+/* 619 */,
+/* 620 */,
+/* 621 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73130,11 +73133,11 @@ exports.ToastModule = ToastModule;
 //# sourceMappingURL=toast.module.js.map
 
 /***/ }),
-/* 619 */,
-/* 620 */,
-/* 621 */,
 /* 622 */,
-/* 623 */
+/* 623 */,
+/* 624 */,
+/* 625 */,
+/* 626 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73180,18 +73183,18 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ }),
-/* 624 */
+/* 627 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Observable_1 = __webpack_require__(63);
-var first_1 = __webpack_require__(627);
+var first_1 = __webpack_require__(630);
 Observable_1.Observable.prototype.first = first_1.first;
 //# sourceMappingURL=first.js.map
 
 /***/ }),
-/* 625 */
+/* 628 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73318,17 +73321,17 @@ function dispatchError(arg) {
 //# sourceMappingURL=PromiseObservable.js.map
 
 /***/ }),
-/* 626 */
+/* 629 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var PromiseObservable_1 = __webpack_require__(625);
+var PromiseObservable_1 = __webpack_require__(628);
 exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 //# sourceMappingURL=fromPromise.js.map
 
 /***/ }),
-/* 627 */
+/* 630 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73339,7 +73342,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(221);
-var EmptyError_1 = __webpack_require__(629);
+var EmptyError_1 = __webpack_require__(632);
 /**
  * Emits only the first value (or the first value that meets some condition)
  * emitted by the source Observable.
@@ -73486,7 +73489,7 @@ var FirstSubscriber = (function (_super) {
 //# sourceMappingURL=first.js.map
 
 /***/ }),
-/* 628 */
+/* 631 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73564,7 +73567,7 @@ exports.toPromise = toPromise;
 //# sourceMappingURL=toPromise.js.map
 
 /***/ }),
-/* 629 */
+/* 632 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73598,7 +73601,7 @@ exports.EmptyError = EmptyError;
 //# sourceMappingURL=EmptyError.js.map
 
 /***/ }),
-/* 630 */
+/* 633 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73631,7 +73634,7 @@ exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 //# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ }),
-/* 631 */
+/* 634 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73662,7 +73665,7 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ }),
-/* 632 */
+/* 635 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73671,7 +73674,7 @@ exports.isArray = Array.isArray || (function (x) { return x && typeof x.length =
 //# sourceMappingURL=isArray.js.map
 
 /***/ }),
-/* 633 */
+/* 636 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73683,7 +73686,7 @@ exports.isObject = isObject;
 //# sourceMappingURL=isObject.js.map
 
 /***/ }),
-/* 634 */
+/* 637 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73709,7 +73712,7 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ }),
-/* 635 */
+/* 638 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
