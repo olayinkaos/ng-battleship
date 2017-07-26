@@ -19,11 +19,11 @@ app.all('/*', function(req, res, next) {
 
 
 var pusher = new Pusher({
-  appId: '351311',
-  key: '26b7d8fa6aa64488853b',
-  secret: '93a9fa53dc7944f4ff77',
-  cluster: 'eu',
-  encrypted: true
+    appId: 'YOUR_APP_ID',
+    key: 'YOUR_APP_KEY',
+    secret: 'YOUR_APP_SECRET',
+    cluster: 'YOUR_APP_CLUSTER',
+    encrypted: true
 });
 
 app.post('/pusher/auth', function(req, res) {
