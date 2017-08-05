@@ -3,14 +3,14 @@ import { Board } from './board'
 import { Player } from './player'
 
 @Injectable()
-export class BattleshipBoardService {
+export class BoardService {
 
   playerId: number = 1;
   boards: Board[] = [];
 
   constructor() { }
 
-  createBoard(size:number = 5) : BattleshipBoardService {
+  createBoard(size:number = 5) : BoardService {
     let tiles = [];
     // create tiles for board
     for(let i=0; i < size; i++) {

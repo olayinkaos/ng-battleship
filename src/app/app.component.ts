@@ -1,7 +1,6 @@
 import { Component, ViewContainerRef } from '@angular/core';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
-import { BattleshipBoardService } from './battleship-board.service'
-import { HelperService } from './helper.service'
+import { BoardService } from './board.service'
 import { Board } from './board'
 
 declare const Pusher: any;
@@ -12,7 +11,7 @@ const BOARD_SIZE = 6;
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [BattleshipBoardService, HelperService]
+  providers: [BoardService]
 })
 
 export class AppComponent {
@@ -21,13 +20,11 @@ export class AppComponent {
   player: number = 0;
   players: number = 0;
   gameId: string;
-  gameUrl: string = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
 
   constructor(
     private toastr: ToastsManager,
     private _vcr: ViewContainerRef,
-    private battleshipBoardService: BattleshipBoardService,
-    private helperService: HelperService
+    private boardService: BoardService,
   ) {
     this.toastr.setRootViewContainerRef(_vcr);
     this.createBoards();
@@ -37,9 +34,9 @@ export class AppComponent {
 
   initPusher() : AppComponent {
     // findOrCreate unique channel ID
-    let id = this.helperService.getQueryParam('id');
+    let id = this.getQueryParam('id');
     if (!id) {
-      id = this.helperService.getUniqueId();
+      id = this.getUniqueId();
       location.search = location.search ? '&id=' + id : 'id=' + id;
     }
     this.gameId = id;
@@ -111,7 +108,7 @@ export class AppComponent {
 
   createBoards() : AppComponent {
     for (let i = 0; i < NUM_PLAYERS; i++)
-      this.battleshipBoardService.createBoard(BOARD_SIZE);
+      this.boardService.createBoard(BOARD_SIZE);
     return this;
   }
 
@@ -135,8 +132,17 @@ export class AppComponent {
     return true;
   }
 
+  getQueryParam(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+  }
+
+  getUniqueId () {
+    return 'presence-' + Math.random().toString(36).substr(2, 8);
+  }
+
   get boards () : Board[] {
-    return this.battleshipBoardService.getBoards()
+    return this.boardService.getBoards()
   }
 
   get winner () : Board {
